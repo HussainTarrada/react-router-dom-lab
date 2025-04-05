@@ -1,15 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router'
+import './NavBar.css'
 
 function NavBar() {
   return (
     <div>
 
-        <Link to='/'>Home</Link>
-        <br/>
-        <Link to='/mailboxes'>Mailboxes</Link>
-        <br/>
-        <Link to='/new-mailbox'>New Mailbox</Link>
+        <Link className='navLink' to='/'>Home</Link>
+        <Link className='navLink' to='/mailboxes'>Mailboxes</Link>
+        <Link className='navLink' to='/new-mailbox'>New Mailbox</Link>
 
       
     </div>
