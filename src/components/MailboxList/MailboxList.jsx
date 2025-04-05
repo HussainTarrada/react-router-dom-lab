@@ -3,12 +3,18 @@ import { Link } from 'react-router';
 
 
 function MailboxList(props) {
+  console.log(props.mailboxes)
   return (
     <>
-         <li key={props.mailboxes._id}>
-            <Link to={`/pokemon/${props.mailboxes._id}`}>{props.mailboxes._id}</Link>
-          </li>
-
+          <h2>Mailboxes List</h2>
+          <ul>
+            {props.mailboxes.map((currentMailbox) => (
+              <li key={currentMailbox._id}>
+              <Link to={`/mailboxes/${currentMailbox._id}`}>{currentMailbox.boxOwner}</Link>
+            </li>  
+            ))}
+          </ul>
+         
     </>
   )
 }

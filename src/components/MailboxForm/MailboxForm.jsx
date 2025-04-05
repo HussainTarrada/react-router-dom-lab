@@ -18,6 +18,7 @@ function MailboxForm(props) {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
+    props.addBox(formData)
     setFormData(initialState)
     navigate('/mailboxes');
   };

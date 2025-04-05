@@ -6,10 +6,20 @@ import MailboxList from './components/MailboxList/MailboxList'
 import MailboxForm from './components/MailboxForm/MailboxForm'
 import MailboxDetails from './components/MailboxDetails/MailboxDetails'
 
+
+const initialState = [
+  { _id: 1, boxOwner: 'Hussain', boxSize: 'small'},
+  { _id: 2, boxOwner: 'Hassan', boxSize: 'large'},
+  { _id: 3, boxOwner: 'Ali', boxSize: 'Medium'},
+  { _id: 4, boxOwner: 'Salman', boxSize: 'small'},
+  { _id: 5, boxOwner: 'Abdulla', boxSize: 'large'},
+];
+
+
 function App() {
   const [count, setCount] = useState(0)
 
-  const [mailboxes, setMailboxes] = useState([])
+  const [mailboxes, setMailboxes] = useState(initialState)
 
   function addBox(newMailboxData){
     newMailboxData._id = mailboxes.length + 1;

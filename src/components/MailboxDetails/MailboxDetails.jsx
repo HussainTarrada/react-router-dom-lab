@@ -11,12 +11,13 @@ const selectedBox = props.mailboxes.find((mailbox) => mailbox._id === Number(mai
 
   return (
     <>
-      <h2>Mailbox {props.mailboxes._id}</h2>
+      <h2>Mailbox {mailboxId}</h2>
+      <h3>Details</h3>
       <dl>
         <dt>Mailbox Owner:</dt>
-        <dd>{props.mailboxes.boxOwner}</dd>
+        <dd>{selectedBox.boxOwner}</dd>
         <dt>Mailbox Size:</dt>
-        <dd>{props.mailboxes.boxSize}</dd>
+        <dd>{selectedBox.boxSize}</dd>
       </dl>
     </>
   )
